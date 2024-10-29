@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Malt total days retriever",
+    "version": "1.0",
+    "description": "Get the number of total days of a Malt mission",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.malt.fr/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false,
+            "match_about_blank": false
+        }
+    ]
+}
